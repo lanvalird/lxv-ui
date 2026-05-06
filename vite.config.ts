@@ -1,14 +1,14 @@
 /// <reference types="vitest/config" />
-import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
 
 // https://vite.dev/config/
+import { storybookTest } from "@storybook/addon-vitest/vitest-plugin";
+import tailwindcss from "@tailwindcss/vite";
+import { playwright } from "@vitest/browser-playwright";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { storybookTest } from "@storybook/addon-vitest/vitest-plugin";
-import { playwright } from "@vitest/browser-playwright";
 import dts from "vite-plugin-dts";
-import tailwindcss from "@tailwindcss/vite";
 
 const dirname =
   typeof __dirname !== "undefined"
@@ -22,13 +22,12 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [
       react(),
-      tailwindcss(),
+      ...(!isLibraryBuild ? [tailwindcss()] : []),
       ...(isLibraryBuild
         ? [
             dts({
               include: ["src"],
               tsconfigPath: "./tsconfig.app.json",
-              bundleTypes: true,
             }),
           ]
         : []),
@@ -43,16 +42,16 @@ export default defineConfig(({ mode }) => {
           lib: {
             entry: path.resolve(dirname, "src/index.ts"),
             name: "LxvUI",
-            formats: ["es", "cjs"],
-            fileName: (format) =>
-              format === "cjs" ? "index.cjs" : "index.mjs",
+            formats: ["es", "umd"],
+            fileName: (format) => `lxv-ui.${format}.js`,
           },
           rollupOptions: {
-            external: ["react", "react-dom", "tailwindcss", "lucide-react"],
+            external: ["react", "react-dom", "react/jsx-runtime"],
             output: {
               globals: {
                 react: "React",
                 "react-dom": "ReactDOM",
+                "react/jsx-runtime": "jsxRuntime",
               },
             },
           },
@@ -60,6 +59,9 @@ export default defineConfig(({ mode }) => {
           emptyOutDir: true,
         }
       : {},
+    cssCodeSplit: true,
+    sourcemap: true,
+    emptyOutDir: true,
     test: {
       projects: [
         {

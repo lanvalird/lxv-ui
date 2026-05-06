@@ -3,17 +3,17 @@
   "version": "1.1.2",
   "description": "Soft user interface for websites",
   "private": false,
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/lxv-ui.umd.js",
+  "module": "./dist/lxv-ui.es.js",
+  "types": "./dist/src/index.d.ts",
   "repository": {
     "url": "https://github.com/lanvalird/lxv-ui"
   },
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/lxv-ui.es.js",
+      "require": "./dist/lxv-ui.umd.js"
     }
   },
   "files": [
@@ -65,26 +65,26 @@
     "@storybook/addon-vitest": "^10.3.6",
     "@storybook/react-vite": "^10.3.6",
     "@tailwindcss/vite": "^4.2.4",
-    "@types/node": "^24.12.2",
+    "@types/node": "^25.6.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
     "@vitest/browser-playwright": "^4.1.5",
     "@vitest/coverage-v8": "^4.1.5",
-    "eslint": "^10.2.1",
+    "eslint": "^10.3.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "eslint-plugin-storybook": "^10.3.6",
-    "globals": "^17.5.0",
+    "globals": "^17.6.0",
     "lucide-react": "^1.14.0",
     "playwright": "^1.59.1",
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
     "shadcn": "^4.7.0",
     "storybook": "^10.3.6",
     "tailwindcss": "^4.2.4",
-    "typescript": "~6.0.2",
-    "typescript-eslint": "^8.58.2",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.59.2",
     "vite": "^8.0.10",
     "vite-plugin-dts": "^5.0.0",
     "vitest": "^4.1.5"
