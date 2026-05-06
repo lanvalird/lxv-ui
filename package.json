@@ -1,0 +1,26 @@
+{
+  "name": "lxv-ui",
+  "version": "0.1.0-alpha",
+  "description": "Soft user interface for websites",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "echo \"hello world\" and bay && exit 0"
+  },
+  "keywords": [
+    "lxv-ui",
+    "ui",
+    "ui-kit",
+    "react",
+    "next",
+    "shadcn",
+    "tailwindcss",
+    "clsx"
+  ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "author": "Valentin Bird (lanvalird)",
+  "license": "MIT",
+  "packageManager": "pnpm@10.33.3"
+}
