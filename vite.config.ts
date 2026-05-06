@@ -39,7 +39,7 @@ export default defineConfig(({ mode }) => {
             fileName: (format) => `index.${format}.js`,
           },
           rollupOptions: {
-            external: ["react", "react-dom"],
+            external: ["react", "react-dom", "tailwindcss", "lucide-react"],
             output: {
               globals: {
                 react: "React",
