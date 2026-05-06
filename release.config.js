@@ -9,6 +9,14 @@ export default {
         provenance: true,
       },
     ],
+    [
+      "@semantic-release/git",
+      {
+        assets: ["package.json"],
+        message:
+          "chore(release): ${nextRelease.version} \n\n${nextRelease.notes}",
+      },
+    ],
     "@semantic-release/github",
   ],
 };

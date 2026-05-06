@@ -23,7 +23,15 @@ export default defineConfig(({ mode }) => {
     plugins: [
       react(),
       tailwindcss(),
-      ...(isLibraryBuild ? [dts({ include: ["src"], bundleTypes: true })] : []),
+      ...(isLibraryBuild
+        ? [
+            dts({
+              include: ["src"],
+              tsconfigPath: "./tsconfig.app.json",
+              bundleTypes: true,
+            }),
+          ]
+        : []),
     ],
     resolve: {
       alias: {
@@ -36,7 +44,8 @@ export default defineConfig(({ mode }) => {
             entry: path.resolve(dirname, "src/index.ts"),
             name: "LxvUI",
             formats: ["es", "cjs"],
-            fileName: (format) => `index.${format}.js`,
+            fileName: (format) =>
+              format === "cjs" ? "index.cjs" : "index.mjs",
           },
           rollupOptions: {
             external: ["react", "react-dom", "tailwindcss", "lucide-react"],

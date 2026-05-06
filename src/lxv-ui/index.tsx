@@ -1,6 +1,6 @@
 import "./lxv-ui.css";
 
-export interface ButtonProps {
+export interface LxvUiLabelProps {
   invert?: boolean;
   size?: "small" | "medium" | "large";
   onClick?: () => void;
@@ -10,7 +10,7 @@ export const LxvUi = ({
   invert = false,
   size = "medium",
   ...props
-}: ButtonProps) => {
+}: LxvUiLabelProps) => {
   const mode = invert ? "lxv-ui-copyright--invert" : "";
   return (
     <div
