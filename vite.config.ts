@@ -25,6 +25,11 @@ export default defineConfig(({ mode }) => {
       tailwindcss(),
       ...(isLibraryBuild ? [dts({ include: ["src"], bundleTypes: true })] : []),
     ],
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./src"),
+      },
+    },
     build: isLibraryBuild
       ? {
           lib: {
