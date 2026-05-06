@@ -8,6 +8,7 @@ import { fileURLToPath } from "node:url";
 import { storybookTest } from "@storybook/addon-vitest/vitest-plugin";
 import { playwright } from "@vitest/browser-playwright";
 import dts from "vite-plugin-dts";
+import tailwindcss from "@tailwindcss/vite";
 
 const dirname =
   typeof __dirname !== "undefined"
@@ -21,6 +22,7 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [
       react(),
+      tailwindcss(),
       ...(isLibraryBuild ? [dts({ include: ["src"], bundleTypes: true })] : []),
     ],
     build: isLibraryBuild

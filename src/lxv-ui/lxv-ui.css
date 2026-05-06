@@ -1,9 +1,9 @@
 .lxv-ui-copyright {
-    background-color: peachpuff;
+    background-color: var(--background);
     padding: 1rem 1.25rem;
     margin: 0.25rem;
     border-radius: 3rem;
-    color: slategrey;
+    color: var(--foreground);
     text-align: center;
 }
 

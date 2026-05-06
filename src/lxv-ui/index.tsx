@@ -11,12 +11,15 @@ export const LxvUi = ({
   size = "medium",
   ...props
 }: ButtonProps) => {
-  const mode = !invert ? "lxv-ui-copyright--invert" : "";
+  const mode = invert ? "lxv-ui-copyright--invert" : "";
   return (
     <div
-      className={["lxv-ui-copyright", `lxv-ui-copyright--${size}`, mode].join(
-        " ",
-      )}
+      className={[
+        "cursor-default select-none",
+        "lxv-ui-copyright",
+        `lxv-ui-copyright--${size}`,
+        mode,
+      ].join(" ")}
       {...props}
     >
       LxvUI
