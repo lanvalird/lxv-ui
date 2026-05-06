@@ -1,0 +1,22 @@
+.lxv-ui-copyright {
+    background-color: peachpuff;
+    padding: 1rem 1.25rem;
+    margin: 0.25rem;
+    border-radius: 3rem;
+    color: slategrey;
+    text-align: center;
+}
+
+.lxv-ui-copyright--small {
+    font-size: 0.75rem;
+}
+.lxv-ui-copyright--medium {
+    font-size: 1rem;
+}
+.lxv-ui-copyright--large {
+    font-size: 3.24rem;
+}
+
+.lxv-ui-copyright--invert {
+    filter: invert();
+}
