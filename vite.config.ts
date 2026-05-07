@@ -22,7 +22,7 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [
       react(),
-      ...(!isLibraryBuild ? [tailwindcss()] : []),
+      tailwindcss(),
       ...(isLibraryBuild
         ? [
             dts({

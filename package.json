@@ -6,6 +6,7 @@
   "main": "./dist/lxv-ui.umd.js",
   "module": "./dist/lxv-ui.es.js",
   "types": "./dist/src/index.d.ts",
+  "style": "./dist/lxv-ui.css",
   "repository": {
     "url": "https://github.com/lanvalird/lxv-ui"
   },
@@ -13,7 +14,8 @@
     ".": {
       "types": "./dist/src/index.d.ts",
       "import": "./dist/lxv-ui.es.js",
-      "require": "./dist/lxv-ui.umd.js"
+      "require": "./dist/lxv-ui.umd.js",
+      "style": "./dist/lxv-ui.css"
     }
   },
   "files": [
