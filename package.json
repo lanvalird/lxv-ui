@@ -16,7 +16,11 @@
       "types": "./dist/src/index.d.ts",
       "import": "./dist/lxv-ui.es.js",
       "require": "./dist/lxv-ui.umd.js"
-    }
+    },
+  "./dist/lxv-ui.css": {
+    "style": "./dist/lxv-ui.css",
+    "default": "./dist/lxv-ui.css"
+  }
   },
   "files": [
     "dist",
@@ -42,7 +46,7 @@
     "clsx"
   ],
   "sideEffects": [
-    "./src/styles.css"
+    "./dist/styles.css"
   ],
   "dependencies": {
     "class-variance-authority": "^0.7.1",
