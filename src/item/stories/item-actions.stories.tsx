@@ -5,7 +5,7 @@ import { Button } from "@/indev/primitives/button";
 import { HeartIcon, PenLineIcon, TrashIcon } from "lucide-react";
 
 const meta: Meta<typeof ItemActions> = {
-  title: "Components/ItemActions",
+  title: "Components/Item/ItemActions",
   component: ItemActions,
   parameters: { layout: "centered" },
   tags: ["autodocs"],

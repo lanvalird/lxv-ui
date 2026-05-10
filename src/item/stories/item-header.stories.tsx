@@ -4,7 +4,7 @@ import { ItemHeader } from "../item-header";
 import { Button } from "@/indev/primitives/button";
 
 const meta: Meta<typeof ItemHeader> = {
-  title: "Components/ItemHeader",
+  title: "Components/Item/ItemHeader",
   component: ItemHeader,
   parameters: { layout: "centered" },
   tags: ["autodocs"],

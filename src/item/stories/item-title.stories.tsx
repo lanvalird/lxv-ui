@@ -4,7 +4,7 @@ import { ItemTitle } from "../item-title";
 import { Badge } from "@/indev/primitives/badge";
 
 const meta: Meta<typeof ItemTitle> = {
-  title: "Components/ItemTitle",
+  title: "Components/Item/ItemTitle",
   component: ItemTitle,
   parameters: { layout: "centered" },
   tags: ["autodocs"],

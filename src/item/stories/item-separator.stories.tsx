@@ -6,7 +6,7 @@ import { ItemContent } from "../item-content";
 import { ItemTitle } from "../item-title";
 
 const meta: Meta<typeof ItemSeparator> = {
-  title: "Components/ItemSeparator",
+  title: "Components/Item/ItemSeparator",
   component: ItemSeparator,
   parameters: { layout: "centered" },
   tags: ["autodocs"],

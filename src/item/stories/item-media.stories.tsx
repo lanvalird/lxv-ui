@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { ItemMedia } from "../item-media";
 
 const meta: Meta<typeof ItemMedia> = {
-  title: "Components/ItemMedia",
+  title: "Components/Item/ItemMedia",
   component: ItemMedia,
   parameters: { layout: "centered" },
   tags: ["autodocs"],

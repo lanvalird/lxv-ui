@@ -4,7 +4,7 @@ import { ItemFooter } from "../item-footer";
 import { Badge } from "@/indev/primitives/badge";
 
 const meta: Meta<typeof ItemFooter> = {
-  title: "Components/ItemFooter",
+  title: "Components/Item/ItemFooter",
   component: ItemFooter,
   parameters: { layout: "centered" },
   tags: ["autodocs"],

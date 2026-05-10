@@ -7,7 +7,7 @@ import { ItemContent } from "../item-content";
 import { ItemTitle } from "../item-title";
 
 const meta: Meta<typeof ItemGroup> = {
-  title: "Components/ItemGroup",
+  title: "Components/Item/ItemGroup",
   component: ItemGroup,
   parameters: { layout: "centered" },
   tags: ["autodocs"],

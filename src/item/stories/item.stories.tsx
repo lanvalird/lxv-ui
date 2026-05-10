@@ -11,7 +11,7 @@ import { Button } from "@/indev/primitives/button";
 import { FolderSearch2Icon, StarIcon } from "lucide-react";
 
 const meta: Meta<typeof Item> = {
-  title: "Components/Item",
+  title: "Components/Item/Item",
   component: Item,
   parameters: { layout: "centered" },
   tags: ["autodocs"],
