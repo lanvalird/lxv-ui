@@ -12,10 +12,10 @@
   },
   "exports": {
     ".": {
+      "style": "./dist/lxv-ui.css",
       "types": "./dist/src/index.d.ts",
       "import": "./dist/lxv-ui.es.js",
-      "require": "./dist/lxv-ui.umd.js",
-      "style": "./dist/lxv-ui.css"
+      "require": "./dist/lxv-ui.umd.js"
     }
   },
   "files": [
