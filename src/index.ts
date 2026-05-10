@@ -1,6 +1,6 @@
 import "./styles.css";
 
-export { LinearHeading, LinearText, LinearList } from "./typography";
+export { LinearHeading, LinearText, LinearList } from "./components/typography";
 
 export {
   Item,
@@ -11,4 +11,4 @@ export {
   ItemMedia,
   ItemActions,
   ItemFooter,
-} from "./item";
+} from "./components/item";
