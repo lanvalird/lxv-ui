@@ -1,5 +1,3 @@
-import './styles.css';
-
-export { LxvUi } from "./lxv-ui";
+import "./styles.css";
 
 export { LinearHeading, LinearText, LinearList } from "./typography";
