@@ -9,6 +9,7 @@ import { playwright } from "@vitest/browser-playwright";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import dts from "vite-plugin-dts";
+import copy from "rollup-plugin-copy";
 
 const dirname =
   typeof __dirname !== "undefined"
@@ -31,6 +32,10 @@ export default defineConfig(({ mode }) => {
             }),
           ]
         : []),
+      copy({
+        targets: [{ src: "static/sources.css", dest: "dist" }],
+        hook: "writeBundle",
+      }),
     ],
     resolve: {
       alias: {
@@ -54,7 +59,14 @@ export default defineConfig(({ mode }) => {
                 "react/jsx-runtime": "jsxRuntime",
               },
             },
+            assetFileNames: (assetInfo: { name: string }) => {
+              if (assetInfo.name === "style.css") {
+                return "lxv-ui.css";
+              }
+              return assetInfo.name;
+            },
           },
+
           sourcemap: true,
           emptyOutDir: true,
         }

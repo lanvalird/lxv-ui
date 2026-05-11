@@ -12,10 +12,12 @@
   },
   "exports": {
     ".": {
+      "style": "./dist/lxv-ui.css",
       "types": "./dist/src/index.d.ts",
       "import": "./dist/lxv-ui.es.js",
       "require": "./dist/lxv-ui.umd.js"
-    }
+    },
+    "./sources.css": "./dist/sources.css"
   },
   "files": [
     "dist",
@@ -41,7 +43,7 @@
     "clsx"
   ],
   "sideEffects": [
-    "./dist/styles.css"
+    "./dist/lxv-ui.css"
   ],
   "dependencies": {
     "class-variance-authority": "^0.7.1",
@@ -78,10 +80,11 @@
     "eslint-plugin-storybook": "^10.3.6",
     "globals": "^17.6.0",
     "lucide-react": "^1.14.0",
-    "radix-ui": "^1.4.3",
     "playwright": "^1.59.1",
+    "radix-ui": "^1.4.3",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
+    "rollup-plugin-copy": "^3.5.0",
     "shadcn": "^4.7.0",
     "storybook": "^10.3.6",
     "tailwindcss": "^4.2.4",
