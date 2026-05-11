@@ -1,6 +1,6 @@
 {
   "name": "@lanvalird/lxv-ui",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Soft user interface for websites",
   "private": false,
   "main": "./dist/lxv-ui.umd.js",
