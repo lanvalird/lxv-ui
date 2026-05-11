@@ -7,8 +7,10 @@ export {
   ItemHeader,
   ItemContent,
   ItemTitle,
+  ItemDescription,
   ItemGroup,
   ItemMedia,
   ItemActions,
   ItemFooter,
+  ItemSeparator,
 } from "./components/item";
