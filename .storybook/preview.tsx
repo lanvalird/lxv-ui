@@ -1,7 +1,7 @@
 import type { Preview } from "@storybook/react-vite";
 import { withThemeByClassName } from "@storybook/addon-themes";
 
-import "../src/styles.css";
+import "./styles.css";
 
 const preview: Preview = {
   parameters: {
@@ -17,9 +17,21 @@ const preview: Preview = {
       // 'off' - skip a11y checks entirely
       test: "todo",
     },
+    themes: {
+      default: "light",
+      list: [
+        { name: "light", class: "light", color: "#ffffff" },
+        { name: "dark", class: "dark", color: "#000000" },
+      ],
+    },
   },
 
   decorators: [
+    (Story) => (
+      <div className="bg-background text-foreground p-4">
+        <Story />
+      </div>
+    ),
     withThemeByClassName({
       themes: {
         light: "light",

@@ -1,5 +1,3 @@
-import "./styles.css";
-
 export { LinearHeading, LinearText, LinearList } from "./components/typography";
 
 export {
